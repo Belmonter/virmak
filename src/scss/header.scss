@@ -1,0 +1,88 @@
+.header {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 14px 0;
+  // .header__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .header__center
+  &__center {
+    display: flex;
+    align-items: center;
+    column-gap: 106px;
+  }
+  // .header__container
+  &__container {
+  }
+  // .header__logo
+  &__logo {
+    display: block;
+    width: 80px;
+    height: 52px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .header__menu
+  &__menu {
+  }
+  // .header__social
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .header__contacts
+  &__contacts {
+  }
+}
+.menu {
+  // .menu__body
+  &__body {
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    line-height: math.div(20 , 16);
+    color: $whiteColor;
+  }
+}
+.social-header {
+  // .social-header__whatsapp
+  &__whatsapp {
+  }
+  // .social-header__youtube
+  &__youtube {
+  }
+  // .social-header__telegram
+  &__telegram {
+  }
+}
+.contacts-header {
+  // .contacts-header__phone
+  &__phone {
+    font-size: rem(18);
+    line-height: math.div(22 , 18);
+    color: $whiteColor
+  }
+  // .contacts-header__text
+  &__text {
+    margin-top: 8px;
+    color: $themeColor;
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+    text-align: end;
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+      <div class="promo">
+        @@include('html/_header.htm',{})
+        @@include('html/_promo.htm',{})
+      </div>
+			<main class="page">
+        @@include('html/_ourProjects.htm',{})
+        @@include('html/_virmak.htm',{})
+        @@include('html/_services.htm',{})
+        @@include('html/_why.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

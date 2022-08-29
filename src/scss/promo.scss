@@ -1,0 +1,26 @@
+.promo {
+  padding: 0px 0px 250px 0px;
+  // .promo__small-container
+  &__small-container {
+  }
+  // .promo__title
+  &__title {
+    max-width: 516px;
+    margin-top: 158px;
+    font-weight: 900;
+    font-size: rem(48);
+    line-height: math.div(56 , 48);
+    color: $whiteColor;
+  }
+  // .promo__desc
+  &__desc {
+    margin-top: 24px;
+    font-size: rem(18);
+    line-height: math.div(22 , 18);
+    color: $whiteColor;
+  }
+  // .promo__btn
+  &__btn {
+    margin-top: 24px;
+  }
+}

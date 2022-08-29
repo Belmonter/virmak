@@ -1,0 +1,61 @@
+.virmak {
+  padding-top: 180px;
+  position: relative;
+  // .virmak__wrapper
+  &__wrapper {
+    position: relative;
+  }
+  // .virmak__left
+  &__left {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 486px;
+    background-color: $themeColor;
+    width: 50%;
+  }
+  // .virmak__right
+  &__right {
+  }
+  // .virmak__content
+  &__content {
+    position: relative;
+    padding: 60px 0px 46px 0px;
+    z-index: 2;
+  }
+  // .virmak__small-container
+  &__small-container {
+  }
+  // .virmak__title
+  &__title {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translate(-50%,0px);
+    font-weight: 900;
+    font-size: 100px;
+    line-height: math.div(120 , 100);
+  }
+  // .virmak__desc
+  &__desc {
+    width: 406px;
+    line-height: math.div(24 , 16);
+    span {
+      font-weight: 800;
+    }
+  }
+  // .virmak__btn
+  &__btn {
+    margin-top: 24px;
+    background-color: $whiteColor;
+  }
+  // .virmak__img
+  &__img {
+    position: absolute;
+    top: 103px;
+    right: 0px;
+  }
+}
+.btn-long {
+}

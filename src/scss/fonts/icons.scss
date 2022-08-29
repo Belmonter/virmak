@@ -1,0 +1,52 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-odnoklassniki .path1:before {
+	content: "\e900";
+	color: rgb(254, 203, 11);
+}
+._icon-odnoklassniki .path2:before {
+	content: "\e901";
+	margin-left: -1em;
+	color: rgb(30, 30, 32);
+}
+._icon-Telegram:before {
+	content: "\e902";
+	color: #fff;
+}
+._icon-vk .path1:before {
+	content: "\e903";
+	color: rgb(254, 203, 11);
+}
+._icon-vk .path2:before {
+	content: "\e904";
+	margin-left: -1em;
+	color: rgb(30, 30, 32);
+}
+._icon-Whatsapp:before {
+	content: "\e905";
+	color: #fff;
+}
+._icon-Youtube .path1:before {
+	content: "\e912";
+	color: rgb(255, 255, 255);
+}
+._icon-Youtube .path2:before {
+	content: "\e913";
+	margin-left: -1em;
+	color: rgb(30, 30, 32);
+}
