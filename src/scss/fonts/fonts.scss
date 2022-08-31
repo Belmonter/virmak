@@ -8,56 +8,42 @@
 @font-face {
 	font-family: Nexa;
 	font-display: swap;
-	src: url("../fonts/Nexa-Black.woff2") format("woff2"), url("../fonts/Nexa-Black.woff") format("woff");
-	font-weight: 900;
+	src: url("../fonts/Nexa-Trial-Black.woff2") format("woff2"), url("../fonts/Nexa-Trial-Black.woff") format("woff");
+	font-weight: 950;
 	font-style: normal;
 }
-// @font-face {
-// 	font-family: NexaBook;
-// 	font-display: swap;
-// 	src: url("../fonts/Nexa-Book.woff2") format("woff2"), url("../fonts/Nexa-Book.woff") format("woff");
-// 	font-weight: 400;
-// 	font-style: normal;
-// }
 @font-face {
 	font-family: Nexa;
 	font-display: swap;
-	src: url("../fonts/Nexa-Bold.woff2") format("woff2"), url("../fonts/Nexa-Bold.woff") format("woff");
+	src: url("../fonts/Nexa-Trial-Bold.woff2") format("woff2"), url("../fonts/Nexa-Trial-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
 	font-family: Nexa;
 	font-display: swap;
-	src: url("../fonts/Nexa-Regular.woff2") format("woff2"), url("../fonts/Nexa-Regular.woff") format("woff");
+	src: url("../fonts/Nexa-Trial-ExtraBold.woff2") format("woff2"), url("../fonts/Nexa-Trial-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: Nexa;
+	font-display: swap;
+	src: url("../fonts/Nexa-Trial-Heavy.woff2") format("woff2"), url("../fonts/Nexa-Trial-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: Nexa;
+	font-display: swap;
+	src: url("../fonts/Nexa-Trial-Regular.woff2") format("woff2"), url("../fonts/Nexa-Trial-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: Nexa;
 	font-display: swap;
-	src: url("../fonts/Nexa-Thin.woff2") format("woff2"), url("../fonts/Nexa-Thin.woff") format("woff");
-	font-weight: 100;
-	font-style: normal;
-}
-@font-face {
-	font-family: Nexa;
-	font-display: swap;
-	src: url("../fonts/Nexa-Heavy.woff2") format("woff2"), url("../fonts/Nexa-Heavy.woff") format("woff");
-	font-weight: 800;
-	font-style: normal;
-}
-// @font-face {
-// 	font-family: Nexa;
-// 	font-display: swap;
-// 	src: url("../fonts/Nexa-XBold.woff2") format("woff2"), url("../fonts/Nexa-XBold.woff") format("woff");
-// 	font-weight: 400;
-// 	font-style: normal;
-// }
-@font-face {
-	font-family: Nexa;
-	font-display: swap;
-	src: url("../fonts/Nexa-Light.woff2") format("woff2"), url("../fonts/Nexa-Light.woff") format("woff");
+	src: url("../fonts/Nexa-Trial-Book.woff2") format("woff2"), url("../fonts/Nexa-Trial-Book.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 }

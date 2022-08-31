@@ -35,7 +35,7 @@ $minWidth: 320;
 $maxWidth: 1450;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
 $maxWidthContainer: 1300;
-$maxWidthSmallContainer: 1110;
+$maxWidthSmallContainer: 1080;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
@@ -188,6 +188,11 @@ body {
 @import "ourProjects";
 @import "virmak";
 @import "services";
+@import "why";
+@import "credit";
+@import "stages";
+@import "map";
+@import "video";
 
 // Подключение стилей отдельных страниц
 @import "home";

@@ -1,3 +1,117 @@
-//====================================================================================================
-
-//====================================================================================================
+.footer {
+  padding-top: 20px;
+  background-color: $mainColor;
+  // .footer__container
+  &__container {
+  }
+  // .footer__wrapper
+  &__wrapper {
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  // .footer__main
+  &__main {
+  }
+  // .footer__logo
+  &__logo {
+    display: block;
+    width: 80px;
+    height: 52px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .footer__phone
+  &__phone {
+    margin-top: 40px;
+  }
+  // .footer__social
+  &__social {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .footer__info
+  &__info {
+    display: flex;
+    column-gap: 20px;
+    align-self: flex-end;
+    font-family: "Roboto";
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+    color: $whiteColor;
+  }
+  // .footer__policy
+  &__policy {
+    padding: 16px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    p {
+      font-family: "Roboto";
+      text-align: center;
+      font-size: rem(10);
+      line-height: math.div(18, 10);
+      color: $whiteColor;
+    }
+  }
+}
+.phone-footer {
+  // .phone-footer__number
+  &__number {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    color: $whiteColor;
+  }
+  // .phone-footer__desc
+  &__desc {
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+    color: $themeColor;
+  }
+}
+.social-footer {
+  // .social-footer__vk
+  &__vk {
+    width: 36px;
+    height: 36px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  // .social-footer__odnoklassniki
+  &__odnoklassniki {
+    width: 36px;
+    height: 36px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.info-footer {
+  // .info-footer__item
+  &__item {
+    max-width: 277px;
+  }
+}
+.item-info-footer {
+  // .item-info-footer__city
+  &__city {
+  }
+  // .item-info-footer__address
+  &__address {
+    margin-top: 16px;
+  }
+  // .item-info-footer__mail
+  &__mail {
+    margin-top: 16px;
+  }
+}

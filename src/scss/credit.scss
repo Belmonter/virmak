@@ -1,0 +1,118 @@
+.credit {
+  position: relative;
+  padding: 120px 0;
+  background-color: #F8F8F8;
+  // .credit__small-container
+  &__small-container {
+  }
+  // .credit__title
+  &__title {
+  }
+  // .credit__slider-container
+  &__slider-container {
+    padding: 0 45px;
+    // background-color: #000;
+  }
+  // .credit__slider
+  &__slider {
+    padding: 10px !important;
+  }
+  // .credit__wrapper
+  &__wrapper {
+    margin: 20px auto;
+  }
+  // .credit__slide
+  &__slide {
+    cursor: pointer;
+    width: 90%;
+    padding: 30px 0px 34px 34px;
+    background-color: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.5s ease 0s;
+    &:hover{
+      box-shadow: 0px 4px 14px rgba(254, 203, 11, 0.14);
+    }
+  }
+  // .credit__slide-left
+  &__slide-left {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translate(0px, -50%);
+  }
+  // .credit__slide-right
+  &__slide-right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 130px;
+    transform: translate(0px, -50%);
+  }
+}
+.slide-credit {
+  // .slide-credit__logo
+  &__logo {
+    width: 144px;
+    margin: 0px auto 0px auto;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  // .slide-credit__validity
+  &__validity {
+    margin-top: 34px;
+  }
+  // .slide-credit__sum
+  &__sum {
+    margin-top: 24px;
+  }
+  // .slide-credit__rate
+  &__rate {
+    margin-top: 24px;
+  }
+  // .slide-credit__btn
+  &__btn {
+    margin: 34px auto 0px auto;
+  }
+}
+.validity-credit {
+  // .validity-credit__title
+  &__title {
+    margin-top: 6px;
+    line-height: math.div(20, 16);
+  }
+  // .validity-credit__desc
+  &__desc {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+  }
+}
+.sum-credit {
+  // .sum-credit__title
+  &__title {
+    margin-top: 6px;
+    line-height: math.div(20, 16);
+  }
+  // .sum-credit__desc
+  &__desc {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+  }
+}
+.rate-credit {
+  // .rate-credit__title
+  &__title {
+    margin-top: 6px;
+    line-height: math.div(20, 16);
+  }
+  // .rate-credit__desc
+  &__desc {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+  }
+}

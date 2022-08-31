@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background: rgba(0, 0, 0, 0.5);
   padding: 14px 0;
   // .header__wrapper
@@ -11,7 +12,7 @@
   &__center {
     display: flex;
     align-items: center;
-    column-gap: 106px;
+    @include adaptiveValue("column-gap", 106, 20, 1440, 1020, 1);
   }
   // .header__container
   &__container {
@@ -35,6 +36,7 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
+    md
   }
   // .header__contacts
   &__contacts {
@@ -47,42 +49,201 @@
   // .menu__list
   &__list {
     display: flex;
-    column-gap: 24px;
+    @include adaptiveValue("column-gap", 24, 15, 1440, 1020, 1);
     align-items: center;
+    @media (max-width: 920px){
+      flex-direction: column;
+      row-gap: 24px;
+      font-size: rem(16);
+    }
   }
   // .menu__item
   &__item {
   }
   // .menu__link
   &__link {
-    line-height: math.div(20 , 16);
+    line-height: math.div(20, 16);
     color: $whiteColor;
+    @include adaptiveValue("font-size", 16, 14, 1440, 1020, 1);
   }
 }
 .social-header {
   // .social-header__whatsapp
   &__whatsapp {
+    &:hover {
+      svg path {
+        fill: $themeColor;
+      }
+    }
   }
   // .social-header__youtube
   &__youtube {
+    &:hover {
+      #headerYoutube {
+        fill: $themeColor;
+      }
+    }
   }
   // .social-header__telegram
   &__telegram {
+    &:hover {
+      svg path {
+        fill: $themeColor;
+      }
+    }
   }
 }
 .contacts-header {
   // .contacts-header__phone
   &__phone {
     font-size: rem(18);
-    line-height: math.div(22 , 18);
-    color: $whiteColor
+    line-height: math.div(22, 18);
+    color: $whiteColor;
   }
   // .contacts-header__text
   &__text {
     margin-top: 8px;
     color: $themeColor;
     font-size: rem(12);
-    line-height: math.div(16 , 12);
+    line-height: math.div(16, 12);
     text-align: end;
+  }
+}
+
+.icon-menu {
+  display: none;
+  @media (max-width: 920px) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: $whiteColor;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translate(-50%,0px);
+  padding: 12px 12px 60px 12px;
+  background: #1E1E20;
+  width: 95vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  .menu-open & {
+    opacity: 1;
+    visibility: visible;
+  }
+  // .burger__logo
+  &__logo {
+    width: 64px;
+    height: 42px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .burger__menu
+  &__menu {
+    margin-top: 16px;
+  }
+  // .burger__footer
+  &__footer {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 61px;
+  }
+}
+.footer-burger {
+  // .footer-burger__social
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .footer-burger__contacts
+  &__contacts {
+  }
+}
+.social-burger {
+  // .social-burger__whatsapp
+  &__whatsapp {
+    &:hover {
+      path {
+        fill: $themeColor;
+      }
+    }
+  }
+  // .social-burger__youtube
+  &__youtube {
+    &:hover {
+      #footerYoutube {
+        fill: $themeColor;
+      }
+    }
+  }
+  // .social-burger__telegram
+  &__telegram {
+    &:hover {
+      path {
+        fill: $themeColor;
+      }
+    }
+  }
+}
+.contacts-burger {
+  // .contacts-burger__phone
+  &__phone {
+    line-height: math.div(20 , 16);
+    color: $whiteColor;
+  }
+  // .contacts-burger__text
+  &__text {
+    margin-top: 6px;
+    font-size: rem(12);
+    line-height: math.div(16 , 12);
+    color: $themeColor;
   }
 }
