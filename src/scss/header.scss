@@ -166,19 +166,23 @@
   left: 50%;
   transform: translate(-50%,0px);
   padding: 12px 12px 60px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background: #1E1E20;
-  width: 95vw;
-  opacity: 0;
-  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: -5000px;
   transition: all 0.3s ease 0s;
   .menu-open & {
-    opacity: 1;
-    visibility: visible;
+    top: 0;
   }
   // .burger__logo
   &__logo {
-    width: 64px;
-    height: 42px;
+    width: 80px;
+    height: 60px;
+    margin: 40px auto 0px auto;
     img {
       width: 100%;
       height: 100%;
@@ -194,7 +198,6 @@
     margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
     column-gap: 50px;
   }
 }

@@ -77,7 +77,8 @@
   &__img {
     position: absolute;
     @include adaptiveValue("top", 103, 205, 1370, 980, 1);
-    right: 0px;
+    right: 234px;
+    @include adaptiveValue("right", 234, 15, 1880, 1440, 1);
     @include adaptiveValue("width", 743, 536, 1370, 980, 1);
     @include adaptiveValue("height", 428, 313, 1370, 980, 1);
     img {

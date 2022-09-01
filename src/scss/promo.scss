@@ -1,4 +1,6 @@
 .promo {
+  width: 100vw;
+  height: 100vh;
   @include adaptiveValue("padding-bottom", 250, 151);
   // .promo__small-container
   &__small-container {
