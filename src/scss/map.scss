@@ -1,5 +1,7 @@
 .map {
   padding: 80px 0px;
+  @include adaptiveValue("padding-top", 80, 60);
+  @include adaptiveValue("padding-bottom", 80, 60);
   background: #F8F8F8;
   // .map__container
   &__container {
@@ -8,10 +10,23 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    column-gap: 60px;
+    justify-content: space-between;
+    @media (max-width: 980px){
+      justify-content: center;
+    }
   }
   // .map__img
   &__img {
+    @include adaptiveValue("width", 640, 375);
+    @include adaptiveValue("height", 398, 234);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @media (max-width: 980px){
+      margin: 24px auto 0px auto;
+    }
   }
   // .map__desc
   &__desc {
@@ -20,14 +35,21 @@
 .desc-map {
   // .desc-map__title
   &__title {
+    max-width: 600px;
     text-align: right;
     font-weight: 700;
-    font-size: rem(88);
+    @include adaptiveValue("font-size", 88, 52);
     line-height: math.div(96, 88);
+    @media (max-width: 980px){
+      text-align: center;
+    }
   }
   // .desc-map__btn
   &__btn {
     margin: 24px 0px 0px auto;
+    @media (max-width: 980px){
+      margin: 34px auto 0px auto;
+    }
   }
 }
 .btn {

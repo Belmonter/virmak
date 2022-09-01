@@ -1,20 +1,29 @@
-:root {
-  --scale--ratio: 0;
-}
-
 .why {
   background-color: $mainColor;
   background-image: url("@img/icons/why_circles.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  @media (max-width: 680px){
+    background-size: cover;
+  }
   // .why__small-container
   &__small-container {
   }
   // .why__wrapper
   &__wrapper {
-    padding: 82px 0px 82px 36px;
+    padding-left: 32px;
+    @include adaptiveValue("padding-top", 82, 60);
+    @include adaptiveValue("padding-bottom", 82, 60);
     display: flex;
     align-items: center;
+    @media (max-width: 1060px) {
+      flex-direction: column;
+      row-gap: 60px;
+      padding-left: 0;
+    }
+    @media (max-width: 680px){
+      row-gap: 24px;
+    }
   }
   // .why__items
   &__items {
@@ -24,13 +33,22 @@
   &__title {
     max-width: 401px;
     font-weight: 700;
-    font-size: rem(88);
+    @include adaptiveValue("font-size", 88, 52);
     line-height: math.div(96, 88);
     color: $themeColor;
+    @media (max-width: 680px){
+      text-align: center;
+    }
   }
   // .why__logo
   &__logo {
     position: relative;
+    @media (max-width: 1060px) {
+      padding-right: 360px;
+    }
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
   // .why__circle-1
   &__circle-1 {
@@ -43,6 +61,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 17.2%;
+    }
   }
   // .why__circle-2
   &__circle-2 {
@@ -55,6 +76,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 26.2%;
+    }
   }
   // .why__circle-3
   &__circle-3 {
@@ -67,6 +91,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 32.2%;
+    }
   }
   // .why__circle-4
   &__circle-4 {
@@ -79,6 +106,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 32.2%;
+    }
   }
   // .why__circle-5
   &__circle-5 {
@@ -91,6 +121,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 26.2%;
+    }
   }
   // .why__circle-6
   &__circle-6 {
@@ -103,6 +136,9 @@
     background-color: $whiteColor;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.34);
     transition: all 0.5s ease 0s;
+    @media (max-width: 1060px) {
+      left: 17.2%;
+    }
   }
   // .why__item
   &__item {
@@ -124,12 +160,30 @@
       &:hover + .why__circle-1 {
         background-color: $themeColor;
       }
+      @media (max-width: 1060px) {
+        left: 18%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
     }
     &:nth-child(4) {
       top: 13%;
       left: 67%;
       &:hover + .why__circle-2 {
         background-color: $themeColor;
+      }
+      @media (max-width: 1060px) {
+        left: 29%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
       }
     }
     &:nth-child(6) {
@@ -138,12 +192,30 @@
       &:hover + .why__circle-3 {
         background-color: $themeColor;
       }
+      @media (max-width: 1060px) {
+        left: 39%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
     }
     &:nth-child(8) {
       top: 52.5%;
       left: 89%;
       &:hover + .why__circle-4 {
         background-color: $themeColor;
+      }
+      @media (max-width: 1060px) {
+        left: 39%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
       }
     }
     &:nth-child(10) {
@@ -152,6 +224,15 @@
       &:hover + .why__circle-5 {
         background-color: $themeColor;
       }
+      @media (max-width: 1060px) {
+        left: 28%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
     }
     &:nth-child(12) {
       top: 92%;
@@ -159,9 +240,30 @@
       &:hover + .why__circle-6 {
         background-color: $themeColor;
       }
+      @media (max-width: 1060px) {
+        left: 17%;
+      }
+      @media (max-width: 680px) {
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
     }
-    &:hover{
+    &:hover {
       transform: scale(1.1);
+    }
+    @media (max-width: 680px){
+        position: relative;
+    }
+  }
+  // .why__items-mobile
+  &__items-mobile {
+    display: none;
+    @media (max-width: 680px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 45px;
     }
   }
 }
@@ -195,5 +297,18 @@
     font-size: rem(18);
     line-height: math.div(20, 18);
     color: $whiteColor;
+  }
+}
+.mobile-items-why {
+  // .mobile-items-why__logo
+  &__logo {
+    margin: 0px auto 0px auto;
+    width: 176px;
+    height: 176px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

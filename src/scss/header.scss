@@ -36,7 +36,9 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
-    md
+    @media (max-width: 490px){
+      display: none;
+    }
   }
   // .header__contacts
   &__contacts {
@@ -193,7 +195,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 61px;
+    column-gap: 50px;
   }
 }
 .footer-burger {

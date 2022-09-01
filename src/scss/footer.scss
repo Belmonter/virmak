@@ -9,9 +9,17 @@
     padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
   // .footer__main
   &__main {
+    @media (max-width: 1050px) {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("column-gap", 30, 22, 768, 375, 1);
+    }
   }
   // .footer__logo
   &__logo {
@@ -23,10 +31,17 @@
       height: 100%;
       object-fit: cover;
     }
+    @media (max-width: 1050px) {
+      order: -1;
+    }
   }
   // .footer__phone
   &__phone {
     margin-top: 40px;
+    @media (max-width: 1050px) {
+      margin-top: 0;
+      order: 2;
+    }
   }
   // .footer__social
   &__social {
@@ -34,16 +49,28 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
+    @media (max-width: 1050px) {
+      order: 1;
+      margin-top: 0;
+    }
   }
   // .footer__info
   &__info {
     display: flex;
-    column-gap: 20px;
+    @include adaptiveValue("column-gap", 20, 10, 1440, 768, 1);
     align-self: flex-end;
     font-family: "Roboto";
     font-size: rem(18);
     line-height: math.div(24, 18);
     color: $whiteColor;
+    @media (max-width: 1050px) {
+      margin-top: 40px;
+      align-self: flex-start;
+    }
+    @media (max-width: 768px){
+      flex-direction: column;
+      row-gap: 40px;
+    }
   }
   // .footer__policy
   &__policy {
@@ -62,8 +89,10 @@
   // .phone-footer__number
   &__number {
     font-size: rem(18);
+    // @include adaptiveValue("font-size", 18, 14 );
     line-height: math.div(22, 18);
     color: $whiteColor;
+    white-space: nowrap;
   }
   // .phone-footer__desc
   &__desc {
@@ -77,8 +106,8 @@
 .social-footer {
   // .social-footer__vk
   &__vk {
-    width: 36px;
-    height: 36px;
+    @include adaptiveValue("width", 36, 28, 768, 375, 1);
+    @include adaptiveValue("height", 36, 28, 768, 375, 1);
     img {
       width: 100%;
       height: 100%;
@@ -87,8 +116,8 @@
   }
   // .social-footer__odnoklassniki
   &__odnoklassniki {
-    width: 36px;
-    height: 36px;
+    @include adaptiveValue("width", 36, 28, 768, 375, 1);
+    @include adaptiveValue("height", 36, 28, 768, 375, 1);
     img {
       width: 100%;
       height: 100%;

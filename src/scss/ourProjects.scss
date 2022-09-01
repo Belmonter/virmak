@@ -1,5 +1,5 @@
 .projects {
-  padding-top: 120px;
+  @include adaptiveValue("padding-top", 120, 60);
   // .projects__small-container
   &__small-container {
   }
@@ -23,6 +23,9 @@
     &:hover {
       transform: scale(1.05);
     }
+    @media (max-width: 951px){
+      max-width: unset;
+    }
   }
 }
 .slide-projects {
@@ -38,8 +41,9 @@
   &__footer {
     margin-top: 16px;
     padding-left: 16px;
+    padding-right: 35px;
     display: flex;
-    column-gap: 74px;
+    justify-content: space-between;
   }
 }
 .footer-slide-projects {
@@ -91,6 +95,9 @@
     column-gap: 24px;
     align-items: center;
     justify-content: flex-end;
+    @media (max-width: 649px){
+      justify-content: center;
+    }
   }
 }
 .project-slide-left {
@@ -104,6 +111,5 @@
   // .projects-slider__wrapper
   &__wrapper {
     margin-top: 30px;
-    padding: 0 45px;
   }
 }

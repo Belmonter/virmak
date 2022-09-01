@@ -1,11 +1,10 @@
-
 import Swiper, { Navigation, Grid } from 'swiper';
 
 // Стили Swiper
 // Базовые стили
 // import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
+import '../../scss/libs/swiper.scss';
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -17,7 +16,7 @@ function initSliders() {
 			observeParents: true,
 			spaceBetween: 20,
 			slidesPerView: 3,
-      slidesPerGroup: 3,
+			slidesPerGroup: 3,
 			grid: {
 				rows: 3,
 				fill: 'row',
@@ -26,33 +25,40 @@ function initSliders() {
 				nextEl: '.project-slide-right',
 				prevEl: '.project-slide-left',
 			},
-			/*
 			breakpoints: {
 				320: {
+					spaceBetween: 20,
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					slidesPerGroup: 1,
+					grid: {
+						rows: 4,
+						fill: 'row',
+					},
 				},
-				768: {
+				650: {
+					spaceBetween: 20,
 					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerGroup: 2,
+					grid: {
+						rows: 3,
+						fill: 'row',
+					},
 				},
-				992: {
+				950: {
+					spaceBetween: 20,
 					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerGroup: 3,
+					grid: {
+						rows: 3,
+						fill: 'row',
+					},
 				},
 			},
-			*/
-			// События
 			on: {},
 		});
 	}
 
-  if (document.querySelector('.credit__slider')) {
+	if (document.querySelector('.credit__slider')) {
 		new Swiper('.credit__slider', {
 			modules: [Navigation],
 			observer: true,
@@ -60,77 +66,66 @@ function initSliders() {
 			spaceBetween: 20,
 			slidesPerView: 3,
 			centerInsufficientSlides: true,
-			navigation: {
-				nextEl: '.credit__slide-right',
-				prevEl: '.credit__slide-left',
-			},
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.swiper-button-next',
-			// },
-			/*
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					navigation: {
+						nextEl: '.credit__slide-right-mobile',
+						prevEl: '.credit__slide-left-mobile',
+					},
 				},
-				768: {
+				630: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					navigation: {
+						nextEl: '.credit__slide-right',
+						prevEl: '.credit__slide-left',
+					},
 				},
-				992: {
+				920: {
+					spaceBetween: 20,
 					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					navigation: {
+						nextEl: '.credit__slide-right',
+						prevEl: '.credit__slide-left',
+					},
 				},
 			},
-			*/
 			on: {},
 		});
 	}
 
-  if (document.querySelector('.video__slider')) {
+	if (document.querySelector('.video__slider')) {
 		new Swiper('.video__slider', {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			spaceBetween: 20,
-      watchOverflow: true,
+			watchOverflow: true,
 			slidesPerView: 3,
 			centerInsufficientSlides: true,
-			navigation: {
-				nextEl: '.video-slider-arrow-right',
-				prevEl: '.video-slider-arrow-left',
-			},
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.swiper-button-next',
-			// },
-			/*
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					navigation: {
+						nextEl: '.mobile-video-arrow-right',
+						prevEl: '.mobile-video-arrow-left',
+					},
+				},
+				550: {
+					slidesPerView: 2,
+					navigation: {
+						nextEl: '.video-slider-arrow-right',
+						prevEl: '.video-slider-arrow-left',
+					},
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					navigation: {
+						nextEl: '.video-slider-arrow-right',
+						prevEl: '.video-slider-arrow-left',
+					},
 				},
 			},
-			*/
 			on: {},
 		});
 	}
@@ -141,7 +136,8 @@ function initSlidersScroll() {
 	if (sliderScrollItems.length > 0) {
 		for (let index = 0; index < sliderScrollItems.length; index++) {
 			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
+			const sliderScrollBar =
+				sliderScrollItem.querySelector('.swiper-scrollbar');
 			const sliderScroll = new Swiper(sliderScrollItem, {
 				observer: true,
 				observeParents: true,
@@ -153,7 +149,7 @@ function initSlidersScroll() {
 				scrollbar: {
 					el: sliderScrollBar,
 					draggable: true,
-					snapOnRelease: false
+					snapOnRelease: false,
 				},
 				mousewheel: {
 					releaseOnEdges: true,
@@ -164,7 +160,7 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener("load", function (e) {
+window.addEventListener('load', function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
