@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Grid } from 'swiper';
+import Swiper, { Navigation, Grid, Thumbs, EffectFade } from 'swiper';
 
 // Стили Swiper
 // Базовые стили
@@ -96,6 +96,68 @@ function initSliders() {
 
 	if (document.querySelector('.video__slider')) {
 		new Swiper('.video__slider', {
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 20,
+			watchOverflow: true,
+			slidesPerView: 3,
+			centerInsufficientSlides: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					navigation: {
+						nextEl: '.mobile-video-arrow-right',
+						prevEl: '.mobile-video-arrow-left',
+					},
+				},
+				550: {
+					slidesPerView: 2,
+					navigation: {
+						nextEl: '.video-slider-arrow-right',
+						prevEl: '.video-slider-arrow-left',
+					},
+				},
+				768: {
+					slidesPerView: 3,
+					navigation: {
+						nextEl: '.video-slider-arrow-right',
+						prevEl: '.video-slider-arrow-left',
+					},
+				},
+			},
+			on: {},
+		});
+	}
+
+	if (document.querySelector('.gallery-top')) {
+		let galleryThumbs = new Swiper('.gallery-thumbs', {
+			modules: [],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 16,
+			slidesPerView: 4,
+			breakpoints: {},
+			on: {},
+		});
+
+		new Swiper('.gallery-top', {
+			modules: [Thumbs, EffectFade],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+			breakpoints: {},
+			on: {},
+		});
+
+		new Swiper('.gallery-thumbs', {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,

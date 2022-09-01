@@ -1,0 +1,101 @@
+.project-popup {
+  // .project-popup__header
+  &__header {
+    padding: 40px;
+    display: flex;
+    column-gap: 20px;
+  }
+  // .project-popup__view
+  &__view {
+  }
+  // .project-popup__slider-top-container
+  &__slider-top-container {
+    width: 380px;
+    height: 380px;
+  }
+  // .project-popup__slider-thumbs-container
+  &__slider-thumbs-container {
+    margin-top: 16px;
+    width: 380px;
+  }
+  // .project-popup__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 54px;
+  }
+}
+.project-popup-slider {
+  // .project-popup-slider__slider
+  &__slider {
+  }
+  // .project-popup-slider__wrapper
+  &__wrapper {
+  }
+  // .project-popup-slider__slide
+  &__slide {
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .project-popup-slider__thumb
+  &__thumb {
+    img {
+      width: 100%;
+      height: 60px;
+      object-fit: cover;
+    }
+  }
+}
+.info-project-popup {
+  // .info-project-popup__wrapper
+  &__wrapper {
+  }
+  // .info-project-popup__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: math.div(38 , 32);
+  }
+  // .info-project-popup__characteristics
+  &__characteristics {
+    font-family: 'Roboto';
+    margin-top: 16px;
+    line-height: math.div(20 , 16);
+  }
+  // .info-project-popup__price
+  &__price {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: rem(22);
+    line-height: math.div(26 , 22);
+    span {
+      font-family: 'Roboto';
+      font-weight: 400;
+    }
+  }
+  // .info-project-popup__estimate
+  &__estimate {
+    margin-top: 16px;
+    width: 252px;
+  }
+  // .info-project-popup__credit-title
+  &__credit-title {
+  }
+  // .info-project-popup__payment
+  &__payment {
+    margin-top: 12px;
+  }
+  // .info-project-popup__request
+  &__request {
+    margin-top: 16px;
+  }
+}
+.credit-price {
+  span {
+    font-weight: 700;
+  }
+}
