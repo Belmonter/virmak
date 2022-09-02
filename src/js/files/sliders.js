@@ -135,7 +135,7 @@ function initSliders() {
 			modules: [],
 			observer: true,
 			observeParents: true,
-			spaceBetween: 16,
+			spaceBetween: 10,
 			slidesPerView: 4,
 			breakpoints: {},
 			on: {},
@@ -147,47 +147,13 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 1,
 			effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
+			fadeEffect: {
+				crossFade: true,
+			},
 			thumbs: {
 				swiper: galleryThumbs,
 			},
 			breakpoints: {},
-			on: {},
-		});
-
-		new Swiper('.gallery-thumbs', {
-			modules: [Navigation],
-			observer: true,
-			observeParents: true,
-			spaceBetween: 20,
-			watchOverflow: true,
-			slidesPerView: 3,
-			centerInsufficientSlides: true,
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					navigation: {
-						nextEl: '.mobile-video-arrow-right',
-						prevEl: '.mobile-video-arrow-left',
-					},
-				},
-				550: {
-					slidesPerView: 2,
-					navigation: {
-						nextEl: '.video-slider-arrow-right',
-						prevEl: '.video-slider-arrow-left',
-					},
-				},
-				768: {
-					slidesPerView: 3,
-					navigation: {
-						nextEl: '.video-slider-arrow-right',
-						prevEl: '.video-slider-arrow-left',
-					},
-				},
-			},
 			on: {},
 		});
 	}
