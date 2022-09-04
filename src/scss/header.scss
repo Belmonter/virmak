@@ -104,6 +104,7 @@
   }
   // .contacts-header__text
   &__text {
+    cursor: pointer;
     margin-top: 8px;
     color: $themeColor;
     font-size: rem(12);

@@ -1,7 +1,7 @@
 <div id="popup-table" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
-      <!-- <button data-close type="button" class="popup__close">Закрыть</button> -->
+      <button data-close type="button" class="project-popup__close"><img src="@img/icons/close.svg" alt=""></button>
       <div class="project-popup">
         <div class="project-popup__header">
           <div class="project-popup__view">
@@ -343,12 +343,136 @@
             </table>
           </div>
           <div class="table-popup__expand expand-table expand-blur">
-            <div class="expand-table__arrow"><img src="@img/icons/arrow_up.svg" alt="arrow up"></div>
-            <div class="expand-table__text">Свернуть комплектацию</div>
+            <div class="expand-table__arrow arrow-down"><img src="@img/icons/arrow_up.svg" alt="arrow up"></div>
+            <div class="expand-table__text">Развернуть комплектацию</div>
+          </div>
+          <div class="table-popup__price">
+            <table>
+              <tr>
+                <th>Цена:</th>
+                <td>3 333 333 <span>₽</span></td>
+                <td>4 444 444 <span>₽</span></td>
+                <td>5 555 555 <span>₽</span></td>
+              </tr>
+            </table>
           </div>
         </div>
+        <div class="project-popup__additionally additionally-project">
+          <div class="additionally-project__title">Дополнительно</div>
+          <div class="additionally-project__options options-additionally">
+            <div class="options-additionally__item item-additionally">
+              <div class="item-additionally__checkbox checkbox checkbox-additionally">
+                <input id="c_1" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
+                  value="1" name="form[]">
+                <label for="c_1" class="checkbox-additionally__label checkbox__label"><span
+                    class="checkbox-additionally__text checkbox__text">Окна Rehau Grazio 70 мм</span></label>
+              </div>
+              <div class="item-additionally__price"><span>+</span> 130 000 рублей</div>
+            </div>
+            <div class="options-additionally__item item-additionally">
+              <div class="item-additionally__checkbox checkbox checkbox-additionally">
+                <input id="c_2" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
+                  value="1" name="form[]">
+                <label for="c_2" class="checkbox-additionally__label checkbox__label"><span
+                    class="checkbox-additionally__text checkbox__text">Терраса, Крыльцо, Балконы, Навесы
+                    (при наличии)</span></label>
+              </div>
+              <div class="item-additionally__price"><span>+</span> 130 000 рублей</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-popup__btn btn">Отправить заявку</div>
       </div>
     </div>
   </div>
 </div>
+
+
+<div id="popup-call" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="call-popup__content popup__content">
+      <button data-close type="button" class="project-popup__close"><img src="@img/icons/close.svg" alt=""></button>
+      <div class="call-popup__title">Обратный звонок</div>
+      <div class="call-popup__subtitle">Перезвоним, ответим на все поставленные вопросы</div>
+      <form class="call-popup__form form-call">
+        <div class="form-call__wrapper">
+          <div class="form-call__inp">
+            <input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Имя" class="input">
+          </div>
+          <div class="form-call__inp">
+            <input data-tel-input maxlength="18" autocomplete="off" type="tel" name="phone" data-error="Ошибка"
+              placeholder="+ 7 (000) 000 00 00" class="input">
+          </div>
+        </div>
+        <div class="form-call__checkbox checkbox">
+          <input id="c_3" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
+            name="form[]">
+          <label for="c_3" class="form-call__label checkbox__label"><span
+              class="form-call__text checkbox__text">Согласен с политикой обработки персональных данных</span></label>
+        </div>
+        <button type="submit" class="form-call__btn btn">Перезвонить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div id="popup-calculator" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="calculator-popup__content popup__content">
+      <button data-close type="button" class="project-popup__close"><img src="@img/icons/close.svg" alt=""></button>
+      <div class="calculator-popup__title">Калькулятор стоимости строительства дома
+        из сип панелей с цсп от компании <span>"</span>VIRMAK<span>"</span></div>
+      <div class="calculator-popup__size size-calculator">
+        <div class="size-calculator__title">Размер дома</div>
+        <div class="size-calculator__wrapper">
+          <div class="size-calculator__inp">
+            <label for="length">Длинна, м
+              <input id="length" autocomplete="off" type="number" name="length" data-error="Ошибка" placeholder="0"
+                class="input">
+              <button class="calculator__up"><img src="@img/icons/direction-up.svg" alt="arrow up"></button>
+              <button class="calculator__down"><img src="@img/icons/direction-down.svg" alt="arrow down"></button>
+            </label>
+          </div>
+          <div class="size-calculator__inp">
+            <label for="width">Ширина, м
+              <input id="width" autocomplete="off" type="number" name="width" data-error="Ошибка" placeholder="0"
+                class="input">
+              <button class="calculator__up"><img src="@img/icons/direction-up.svg" alt="arrow up"></button>
+              <button class="calculator__down"><img src="@img/icons/direction-down.svg" alt="arrow down"></button>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-popup__floor floor-calculator">
+        <div class="floor-calculator__title">Этажность дома</div>
+        <div class="floor-calculator__wrapper">
+          <div class="floor-calculator__item item-floor">
+            <div class="item-floor__title">Один этаж без мансарды</div>
+            <div class="item-floor__img"><img width="57" height="36" src="@img/floor-1_1.png" alt="house"></div>
+          </div>
+          <div class="floor-calculator__item item-floor">
+            <div class="item-floor__title">Один этаж с мансардой</div>
+            <div class="item-floor__img"><img width="57" height="42" src="@img/floor-2_2.png" alt="house"></div>
+          </div>
+          <div class="floor-calculator__item item-floor">
+            <div class="item-floor__title">Два полных этажа</div>
+            <div class="item-floor__img"><img width="57" height="48" src="@img/floor-3_3.png" alt="house"></div>
+          </div>
+          <div class="floor-calculator__item item-floor">
+            <div class="item-floor__title">Два этажа с мансардой</div>
+            <div class="item-floor__img"><img width="57" height="54" src="@img/floor-4_4.png" alt="house"></div>
+          </div>
+          <div class="floor-calculator__item item-floor">
+            <div class="item-floor__title">Три полных этажа</div>
+            <div class="item-floor__img"><img width="57" height="60" src="@img/floor-5_5.png" alt="house"></div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-popup__total total-calculator">
+        <div class="total-calculator__price">Итоговая стоимость: 3 333 3333 <span>₽</span></div>
+        <div class="total-calculator__continue btn">Далее</div>
+      </div>
+    </div>
+  </div>
 </div>

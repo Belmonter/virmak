@@ -1,0 +1,129 @@
+.popup {
+  // .popup__wrapper
+  &__wrapper {
+  }
+  // .popup__content
+  &__content {
+  }
+}
+.calculator-popup {
+  // .calculator-popup__content
+  &__content {
+  }
+  // .calculator-popup__title
+  &__title {
+    max-width: 730px;
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: math.div(38, 32);
+    span {
+      font-family: "Roboto";
+    }
+  }
+  // .calculator-popup__size
+  &__size {
+    margin-top: 24px;
+  }
+  // .calculator-popup__floor
+  &__floor {
+    margin-top: 24px;
+  }
+  // .calculator-popup__total
+  &__total {
+    margin-top: 24px;
+  }
+}
+.project-popup {
+  // .project-popup__close
+  &__close {
+  }
+}
+.size-calculator {
+  // .size-calculator__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+  }
+  // .size-calculator__wrapper
+  &__wrapper {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 112px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(30, 30, 32, 0.1);
+  }
+  // .size-calculator__inp
+  &__inp {
+    label {
+      position: relative;
+    }
+    input {
+      margin-top: 12px;
+      width: 160px;
+      height: 36px;
+      border: 1px solid rgba(30, 30, 32, 0.6);
+    }
+  }
+}
+.input {
+}
+.calculator {
+  // .calculator__up
+  &__up {
+    position: absolute;
+    top: 25px;
+    right: -5px;
+    transform: translate(100%,0px);
+  }
+  // .calculator__down
+  &__down {
+    position: absolute;
+    top: 47px;
+    right: -5px;
+    transform: translate(100%,0px);
+  }
+}
+.floor-calculator {
+  // .floor-calculator__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: math.div(24 , 18);
+  }
+  // .floor-calculator__wrapper
+  &__wrapper {
+    display: flex;
+    column-gap: 44px;
+  }
+  // .floor-calculator__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 135px;
+  }
+}
+.item-floor {
+  // .item-floor__title
+  &__title {
+    line-height: math.div(20 , 16);
+    width: 112px;
+  }
+  // .item-floor__img
+  &__img {
+    flex-grow: 1;
+    margin-top: 36px;
+  }
+}
+.total-calculator {
+  // .total-calculator__price
+  &__price {
+  }
+  // .total-calculator__continue
+  &__continue {
+  }
+}
+.btn {
+}

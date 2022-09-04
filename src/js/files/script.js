@@ -3,7 +3,7 @@ import { isMobile } from './functions.js';
 // Подключение списка активных модулей
 import { flsModules } from './modules.js';
 
-flsModules.popup.open('#popup-table');
+flsModules.popup.open('#popup-calculator');
 
 // Развернуть, свернуть таблицу
 
