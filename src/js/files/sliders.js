@@ -137,7 +137,16 @@ function initSliders() {
 			observeParents: true,
 			spaceBetween: 10,
 			slidesPerView: 4,
-			breakpoints: {},
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+					slidesPerView: 4,
+				},
+				768: {
+					spaceBetween: 10,
+					slidesPerView: 4,
+				},
+			},
 			on: {},
 		});
 

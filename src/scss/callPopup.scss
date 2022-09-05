@@ -2,11 +2,13 @@
   // .call-popup__content
   &__content {
     padding: 60px 0px 104px 60px;
+    @include adaptiveValue("padding-left", 60, 16);
+    @include adaptiveValue("padding-right", 60, 16);
   }
   // .call-popup__title
   &__title {
     font-weight: 700;
-    font-size: rem(32);
+    @include adaptiveValue("font-size", 32, 24);
     line-height: math.div(38, 32);
   }
   // .call-popup__subtitle
@@ -31,19 +33,31 @@
     margin-top: 24px;
     display: flex;
     column-gap: 24px;
+    @media (max-width: 450px){
+      flex-direction: column;
+      row-gap: 16px;
+    }
   }
   // .form-call__inp
   &__inp {
     width: 220px;
     height: 36px;
+    @media (max-width: 450px){
+      width: 100%;
+    }
     input {
-      font-family: 'Roboto';
+      font-family: "Roboto";
       padding: 8px 10px;
       height: 100%;
       border: 1px solid rgba(30, 30, 32, 0.6);
       &::placeholder {
         font-family: "Roboto";
         color: rgba(30, 30, 32, 0.4);
+      }
+    }
+    &._form-error {
+      input {
+        border: 1px solid #f8133c;
       }
     }
   }
@@ -57,12 +71,12 @@
       box-shadow: unset;
     }
     &:checked + .form-call__label::before {
-      background: url('@img/icons/yellow_check.svg') center center/cover no-repeat;
+      background: url("@img/icons/yellow_check.svg") center center/cover no-repeat;
     }
   }
   // .form-call__label
   &__label {
-    &::before{
+    &::before {
       flex: 0 0 12px;
       width: 12px;
       height: 12px;
@@ -71,11 +85,32 @@
   // .form-call__text
   &__text {
     font-size: rem(12);
-    line-height: math.div(16 , 12);
+    line-height: math.div(16, 12);
   }
   // .form-call__btn
   &__btn {
+  }
+  // .form-call__footer
+  &__footer {
     margin-top: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .form-call__error
+  &__error {
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+    color: #f8133c;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+    &.error-show {
+      width: fit-content;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 .input {
@@ -90,6 +125,4 @@
   // .checkbox__text
   &__text {
   }
-}
-.btn {
 }

@@ -1,0 +1,37 @@
+.popup {
+  // .popup__wrapper
+  &__wrapper {
+  }
+  // .popup__content
+  &__content {
+  }
+}
+.thanks-popup {
+  // .thanks-popup__content
+  &__content {
+    padding: 60px 0px 190px 0px;
+  }
+  // .thanks-popup__title
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 32, 24);
+    line-height: math.div(38 , 32);
+  }
+  // .thanks-popup__icon
+  &__icon {
+    margin: 82px auto 0px auto;
+    width: 75px;
+    height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.project-popup {
+  // .project-popup__close
+  &__close {
+  }
+}

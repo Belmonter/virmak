@@ -1,4 +1,4 @@
-<header class="header">
+<header data-scroll="120" data-scroll-show class="header">
   <div class="header__container">
     <div class="header__wrapper">
       <a href="" class="header__logo"><img src="@img/logo.png" alt="logo"></a>
@@ -6,12 +6,12 @@
         <div data-da=".burger__menu, 920" class="header__menu menu">
           <nav class="menu__body">
             <ul class="menu__list">
-              <li class="menu__item"><a href="" class="menu__link">Проекты</a></li>
-              <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-              <li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-              <li class="menu__item"><a href="" class="menu__link">Ипотека</a></li>
-              <li class="menu__item"><a href="" class="menu__link">Карта объектов</a></li>
-              <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+              <li class="menu__item"><a href="#" data-goto=".projects" class="menu__link underline-one">Проекты</a></li>
+              <li class="menu__item"><a href="#" data-goto=".virmak" class="menu__link underline-one">О нас</a></li>
+              <li class="menu__item"><a href="#" data-goto=".services" class="menu__link underline-one">Услуги</a></li>
+              <li class="menu__item"><a href="#" data-goto=".credit" class="menu__link underline-one">Ипотека</a></li>
+              <li class="menu__item"><a href="#" data-goto=".map" class="menu__link underline-one">Карта объектов</a></li>
+              <li class="menu__item"><a href="#" data-goto=".footer" class="menu__link underline-one">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -95,7 +95,7 @@
       </div>
       <div class="footer-burger__contacts contacts-burger">
         <div class="contacts-burger__phone">8 800 550 46 96</div>
-        <div class="contacts-burger__text">Обратный звонок</div>
+        <div data-popup="#popup-call" class="contacts-burger__text">Обратный звонок</div>
       </div>
     </div>
   </div>

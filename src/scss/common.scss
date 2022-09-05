@@ -23,6 +23,12 @@
     background: #FECB0B;
     line-height: math.div(22 , 16);
   }
+  &.btn-disabled {
+    background: #E7E7E7;
+    box-shadow: none;
+    color: rgba(30, 30, 32, 0.5);
+    pointer-events: none;
+  }
 }
 .title {
   text-align: center;
@@ -36,3 +42,43 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+
+
+// Анимация меню 
+
+.underline-one {
+    color: #fff; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+
+.underline-one:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: $themeColor; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px; /* Высота линии */
+    background-color: $themeColor; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+
+// Липкая шапка
+
