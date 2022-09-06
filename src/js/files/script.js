@@ -5,7 +5,7 @@ import { flsModules } from './modules.js';
 import { floorCheck } from './floorCheck.js';
 import { setHouseImg } from './houseImg.js';
 
-// flsModules.popup.open('#popup-call');
+flsModules.popup.open('#popup-call');
 
 // Развернуть, свернуть таблицу
 
@@ -49,24 +49,54 @@ document
 
 // Отображение текста ошибки при валидации формы
 
-let inputs = document.querySelectorAll('.form-call__inp input');
+let callNameInp = document.querySelector('#call-phone');
+let callPhoneInp = document.querySelector('#call-phone');
+let callButton = document.querySelector('#call-button');
+let callError = document.querySelector('#call-error');
+let getProjectNameInp = document.querySelector('#getProject-name');
+let getProjectPhoneInp = document.querySelector('#getProject-phone');
+let getProjectButton = document.querySelector('#getProject-button');
+let getProjectError = document.querySelector('#getProject-error');
+let estimateNameInp = document.querySelector('#estimate-name');
+let estimatePhoneInp = document.querySelector('#estimate-phone');
+let estimateButton = document.querySelector('#estimate-button');
+let estimateError = document.querySelector('#estimate-error');
+let creditNameInp = document.querySelector('#credit-name');
+let creditPhoneInp = document.querySelector('#credit-phone');
+let creditButton = document.querySelector('#credit-button');
+let creditError = document.querySelector('#credit-error');
 
-inputs.forEach(el => {
-	el.addEventListener('blur', function (e) {
-		if (!el.value) {
-			document
-				.querySelectorAll('.form-call__error')
-				.forEach(el => el.classList.add('error-show'));
-			document
-				.querySelectorAll('.form-call__btn')
-				.forEach(el => el.classList.add('btn-disabled'));
-		} else {
-			document
-				.querySelectorAll('.form-call__error')
-				.forEach(el => el.classList.remove('error-show'));
-			document
-				.querySelectorAll('.form-call__btn')
-				.forEach(el => el.classList.remove('btn-disabled'));
-		}
-	});
+document.addEventListener('input', function (e) {
+	if (callNameInp.value && callPhoneInp.value) {
+		callError.classList.remove('error-show');
+		callButton.classList.remove('btn-disabled');
+	} else if (!callNameInp.value || !callPhoneInp.value) {
+		callError.classList.add('error-show');
+		callButton.classList.add('btn-disabled');
+	}
+
+  if (getProjectNameInp.value && getProjectPhoneInp.value) {
+		getProjectError.classList.remove('error-show');
+		getProjectButton.classList.remove('btn-disabled');
+	} else if (!getProjectNameInp.value || !getProjectPhoneInp.value) {
+		getProjectError.classList.add('error-show');
+		getProjectButton.classList.add('btn-disabled');
+	}
+
+  if (estimateNameInp.value && estimatePhoneInp.value) {
+		estimateError.classList.remove('error-show');
+		estimateButton.classList.remove('btn-disabled');
+	} else if (!estimateNameInp.value || !estimatePhoneInp.value) {
+		estimateError.classList.add('error-show');
+		estimateButton.classList.add('btn-disabled');
+	}
+
+  if (creditNameInp.value && creditPhoneInp.value) {
+		creditError.classList.remove('error-show');
+		creditButton.classList.remove('btn-disabled');
+	} else if (!creditNameInp.value || !creditPhoneInp.value) {
+		creditError.classList.add('error-show');
+		creditButton.classList.add('btn-disabled');
+	}
+
 });

@@ -362,18 +362,18 @@
           <div class="additionally-project__options options-additionally">
             <div class="options-additionally__item item-additionally">
               <div class="item-additionally__checkbox checkbox checkbox-additionally">
-                <input id="c_1" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
+                <input id="c_12" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
                   value="1" name="form[]">
-                <label for="c_1" class="checkbox-additionally__label checkbox__label"><span
+                <label for="c_12" class="checkbox-additionally__label checkbox__label"><span
                     class="checkbox-additionally__text checkbox__text">Окна Rehau Grazio 70 мм</span></label>
               </div>
               <div class="item-additionally__price"><span>+</span> 130 000 рублей</div>
             </div>
             <div class="options-additionally__item item-additionally">
               <div class="item-additionally__checkbox checkbox checkbox-additionally">
-                <input id="c_2" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
+                <input id="c_22" data-error="Ошибка" class="checkbox-additionally__input checkbox__input" type="checkbox"
                   value="1" name="form[]">
-                <label for="c_2" class="checkbox-additionally__label checkbox__label"><span
+                <label for="c_22" class="checkbox-additionally__label checkbox__label"><span
                     class="checkbox-additionally__text checkbox__text">Терраса, Крыльцо, Балконы, Навесы
                     <span>(</span>при наличии<span>)</span></span></label>
               </div>
@@ -396,23 +396,23 @@
       <form class="call-popup__form form-call">
         <div class="form-call__wrapper">
           <div class="form-call__inp">
-            <input data-required data-validate autocomplete="off" type="text" name="name" placeholder="Имя"
+            <input id="call-name" data-required data-validate autocomplete="off" type="text" name="call-name" placeholder="Имя"
               class="input">
           </div>
           <div class="form-call__inp">
-            <input data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="phone"
+            <input id="call-phone" data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="call-phone"
               placeholder="+ 7 (000) 000 00 00" class="input">
           </div>
         </div>
         <div class="form-call__checkbox checkbox">
-          <input id="c_3" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
+          <input id="c_1" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
             name="form[]">
-          <label for="c_3" class="form-call__label checkbox__label"><span
+          <label for="c_1" class="form-call__label checkbox__label"><span
               class="form-call__text checkbox__text">Согласен с политикой обработки персональных данных</span></label>
         </div>
         <div class="form-call__footer">
-          <button type="submit" class="form-call__btn btn btn-disabled">Перезвонить</button>
-          <div class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
+          <button id="call-button" type="submit" class="form-call__btn btn btn-disabled">Перезвонить</button>
+          <div id="call-error" class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
         </div>
       </form>
     </div>
@@ -540,24 +540,24 @@
       <form class="call-popup__form form-call">
         <div class="form-call__wrapper">
           <div class="form-call__inp">
-            <input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Имя" class="input">
+            <input id="getProject-name" autocomplete="off" type="text" name="getProject-name" data-error="Ошибка" placeholder="Имя" class="input">
           </div>
           <div class="form-call__inp">
-            <input data-tel-input maxlength="18" autocomplete="off" type="tel" name="phone" data-error="Ошибка"
+            <input id="getProject-phone" data-tel-input maxlength="18" autocomplete="off" type="tel" name="getProject-phone" data-error="Ошибка"
               placeholder="+ 7 (000) 000 00 00" class="input">
           </div>
         </div>
         <div class="form-call__checkbox checkbox">
-          <input id="c_3" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
+          <input id="c_2" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
             name="form[]">
-          <label for="c_3" class="form-call__label checkbox__label"><span
+          <label for="c_2" class="form-call__label checkbox__label"><span
               class="form-call__text checkbox__text">Согласен с
               политикой обработки персональных данных</span></label>
         </div>
         <div class="form-call__footer">
-          <button data-popup="#popup-thanks" type="submit" class="form-call__btn btn btn-disabled">Отправить
+          <button id="getProject-button" data-popup="#popup-thanks" type="submit" class="form-call__btn btn btn-disabled">Отправить
             заявку</button>
-          <div class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
+          <div id="getProject-error" class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
         </div>
       </form>
     </div>
@@ -583,11 +583,11 @@
       <form class="call-popup__form form-call">
         <div class="form-call__wrapper">
           <div class="form-call__inp">
-            <input data-required data-validate autocomplete="off" type="text" name="name" placeholder="Имя"
+            <input id="estimate-name" data-required data-validate autocomplete="off" type="text" name="estimate-name" placeholder="Имя"
               class="input">
           </div>
           <div class="form-call__inp">
-            <input data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="phone"
+            <input id="estimate-phone" data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="estimate-phone"
               placeholder="+ 7 (000) 000 00 00" class="input">
           </div>
         </div>
@@ -598,8 +598,8 @@
               class="form-call__text checkbox__text">Согласен с политикой обработки персональных данных</span></label>
         </div>
         <div class="form-call__footer">
-          <button type="submit" class="form-call__btn btn btn-disabled">Заказать</button>
-          <div class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
+          <button id="estimate-button" type="submit" class="form-call__btn btn btn-disabled">Заказать</button>
+          <div id="estimate-error" class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
         </div>
       </form>
     </div>
@@ -616,23 +616,23 @@
       <form class="call-popup__form form-call">
         <div class="form-call__wrapper">
           <div class="form-call__inp">
-            <input data-required data-validate autocomplete="off" type="text" name="name" placeholder="Имя"
+            <input id="credit-name" data-required data-validate autocomplete="off" type="text" name="credit-name" placeholder="Имя"
               class="input">
           </div>
           <div class="form-call__inp">
-            <input data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="phone"
+            <input id="credit-phone" data-tel-input maxlength="18" data-required data-validate autocomplete="off" type="tel" name="credit-phone"
               placeholder="+ 7 (000) 000 00 00" class="input">
           </div>
         </div>
         <div class="form-call__checkbox checkbox">
-          <input id="c_3" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
+          <input id="c_4" data-error="Ошибка" class="form-call__input checkbox__input" type="checkbox" value="1"
             name="form[]">
-          <label for="c_3" class="form-call__label checkbox__label"><span
+          <label for="c_4" class="form-call__label checkbox__label"><span
               class="form-call__text checkbox__text">Согласен с политикой обработки персональных данных</span></label>
         </div>
         <div class="form-call__footer">
-          <button type="submit" class="form-call__btn btn btn-disabled">Отправить заявку</button>
-          <div class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
+          <button id="credit-button" type="submit" class="form-call__btn btn btn-disabled">Отправить заявку</button>
+          <div id="credit-error" class="form-call__error">Пожалуйста, проверьте правильность введенных полей</div>
         </div>
       </form>
     </div>
